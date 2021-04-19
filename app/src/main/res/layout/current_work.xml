@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="12dp">
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/wait_submit_work_list_tips"
+                android:textSize="24sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:id="@+id/more_works_leader"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/colorTipsFont"
+                android:text="@string/more_works_tips" />
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:id="@+id/workListScrollViewCurrent" />
+
+        <com.google.android.material.circularreveal.CircularRevealFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/fillWorkFragment">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/current_no_work_tips"
+                android:textColor="#2C2A2A"
+                android:id="@+id/addWorkInHeadPage" />
+        </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+
+
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

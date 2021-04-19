@@ -1,0 +1,30 @@
+<resources>
+    <dimen name="fab_margin_right">30dp</dimen>
+    <dimen name="fab_margin_bottom">60dp</dimen>
+    <dimen name="title_size">23sp</dimen>
+    <dimen name="course_item_height">60dp</dimen>
+    <dimen name="course_item_right_font_size">6sp</dimen>
+    <dimen name="course_time">5sp</dimen>
+    <dimen name="week_item_width">50dp</dimen>
+    <dimen name="week_font_tips_size">12sp</dimen>
+    <dimen name="course_font_tips_size">18sp</dimen>
+    <dimen name="chipNotCheckedBorderWith">0dp</dimen>
+    <dimen name="course_item_corner">5dp</dimen>
+    <dimen name="course_item_corner_default">0dp</dimen>
+    <dimen name="course_item_font_size">5sp</dimen>
+    <dimen name="chipCheckedBorderWith">3dp</dimen>
+    <dimen name="course_item_card_strokeWidth">2dp</dimen>
+    <dimen name="course_item_card_strokeWidthDefault">0dp</dimen>
+    <dimen name="course_item_text_padding">3dp</dimen>
+
+    <dimen name="course_item_card_padding">1dp</dimen>
+    <dimen name="settings_time_margin_bottom">10dp</dimen>
+
+    <dimen name="course_head_font_size">6sp</dimen>
+    <dimen name="settings_time_font_size">6sp</dimen>
+
+    <dimen name="add_work_tips_font_size">16sp</dimen>
+
+    <dimen name="work_details_pictures_width">300dp</dimen>
+    <dimen name="work_details_pictures_height">225dp</dimen>
+</resources>

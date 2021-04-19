@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/bg_partly_cloudy_day"
+    android:layout_height="180dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/iconImg"
+        android:layout_above="@id/userText"
+        android:src="@mipmap/ic_assistant" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/default_id_adress"
+        android:textColor="#fff"
+        android:id="@+id/mailText"
+        android:textSize="14sp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userText"
+        android:layout_marginTop="10dp"
+        android:text="@string/default_user_name"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_above="@id/mailText" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

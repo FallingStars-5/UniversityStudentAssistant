@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/show_not_completed_work"
+        android:title="@string/only_show_not_completed_work_tips"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/show_completed_work"
+        android:title="@string/only_show_completed_work_tips"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/show_all_work"
+        android:title="@string/show_all_work_tips"
+        app:showAsAction="never" />
+</menu>

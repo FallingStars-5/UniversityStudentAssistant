@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.larswerkman.holocolorpicker.ColorPicker
+        android:id="@+id/picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <com.larswerkman.holocolorpicker.SVBar
+        android:id="@+id/sv_bar"
+        android:layout_width="322dp"
+        android:layout_height="112dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dip"/>
+
+    <com.larswerkman.holocolorpicker.OpacityBar
+        android:id="@+id/opacity_bar"
+        android:layout_width="322dp"
+        android:layout_height="112dp"
+        android:layout_gravity="center"
+        android:layout_margin="8dip"/>
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="15dp"
+            android:id="@+id/cancel_select_color"
+            android:backgroundTint="@color/colorTipsFont"
+            android:layout_marginEnd="30dp"
+            android:text="取消" />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="15dp"
+            android:id="@+id/sure_select_color"
+            android:backgroundTint="@color/select_week_checked_bg"
+            android:text="确定" />
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

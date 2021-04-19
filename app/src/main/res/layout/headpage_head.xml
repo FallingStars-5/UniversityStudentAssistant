@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_clear_day"
+    android:layout_height="200dp">
+
+
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu"
+            android:id="@+id/myDraw"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/head_page_showing_radom_poems"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:id="@+id/randomTextOfHeadPage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/head_page_showing_default_date"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:id="@+id/showNowDateAndWeek"
+            android:textColor="#fff" />
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+</com.google.android.material.circularreveal.CircularRevealFrameLayout>

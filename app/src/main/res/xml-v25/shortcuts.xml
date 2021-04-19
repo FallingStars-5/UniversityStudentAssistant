@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="static_open_add_work"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_work_black"
+        android:shortcutLongLabel="@string/add_work_tips"
+        android:shortcutShortLabel="@string/add_work_tips">
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.MainActivity"/>
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.ui.work.WorkActivity"/>
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.ui.work.addWork.AddWorkActivity"/>
+    </shortcut>
+
+
+    <!-- 第一个静态shortcut -->
+    <shortcut
+        android:shortcutId="static_open_work"
+        android:enabled="true"
+        android:icon="@drawable/ic_work_black"
+        android:shortcutLongLabel="@string/my_work_name"
+        android:shortcutShortLabel="@string/my_work_name">
+        <!--
+            一个shortcut，当有多个intents与之相关联时，在用户启动该shortcut时，最先呈现给用户的是
+            <intent>...</intent>集合中最后一个intent操作事件。
+            即这里创建了一个intent的回退栈，最后一个才是被快捷方式打开的那个。
+        -->
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.MainActivity"/>
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.ui.work.WorkActivity"/>
+
+    </shortcut>
+    <!-- 第二个静态shortcut -->
+    <shortcut
+        android:shortcutId="static_open_course"
+        android:enabled="true"
+        android:icon="@drawable/ic_course_black"
+        android:shortcutLongLabel="@string/head_page_my_course_tips"
+        android:shortcutShortLabel="@string/head_page_my_course_tips">
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.MainActivity"/>
+
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.srtp.assistant"
+            android:targetClass="com.srtp.assistant.ui.course.CourseActivity"/>
+    </shortcut>
+
+</shortcuts>

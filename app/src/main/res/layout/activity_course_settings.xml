@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".ui.settings.courseSettings.CourseSettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_course_settings"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ToolBarStyle" >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/course_table_settings"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="@dimen/title_size" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/course_table_name"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_name"
+                android:text="@string/default_course_table_name"/>
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/start_date_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_first_week_time"
+                android:text="@string/start_school_time_tips"/>
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/now_week_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_now_week"
+                android:text="@string/now_week_default"/>
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/day_course_section_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_day_section_number"
+                android:text="@string/day_course_section_default"/>
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/week_sum_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_sum_week_number"
+                android:text="@string/week_sum_default"/>
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/day_course_change_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_class_list_time"
+                android:text="@string/day_course_change_default"/>
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/is_show_weekend_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/is_show_weekend_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/is_use_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/is_use_remind_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/set_remind_time_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsTipsFontStyle"
+                android:id="@+id/setting_course_remind_time"
+                android:text="@string/default_remind_time"/>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

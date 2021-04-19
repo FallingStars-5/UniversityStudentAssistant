@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#338DFB</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorThemeFont">#000</color>
+    <color name="colorCourseSection">#000</color>
+    <color name="colorCourseTime">#000</color>
+    <color name="color_course_week">#000</color>
+
+    <color name="colorCourseDefault">#d0ccFFaa</color>
+    <color name="colorCourse_ING">#FFEB3B</color>
+    <color name="colorHomeChecked">#92EFA8</color>
+    <color name="colorCourse_HAVE3_5">#CDDC39</color>
+
+
+    <color name="colorCourse1">#d0dae8fc</color>
+    <color name="colorCourse2">#d0d5e8d4</color>
+    <color name="colorCourse3">#d0ffe6cc</color>
+    <color name="colorCourse4">#d0fff2cc</color>
+    <color name="colorCourse5">#d0f8cecc</color>
+    <color name="colorCourse6">#d0ffd5e7</color>
+    <color name="colorCourse7">#d066FFFF</color>
+    <color name="colorCourse8">#d000CCFF</color>
+    <color name="colorCourse9">#d0FF9900</color>
+    <color name="colorCourse10">#d0FF6600</color>
+    <color name="colorCourse11">#d066CC33</color>
+    <color name="colorCourse12">#d033FF99</color>
+
+
+    <color name="colorEdit">#EFF0F3</color>
+    <color name="colorTipsFont">#656464</color>
+
+    <color name="select_week_not_checked_font">@color/colorTipsFont</color>
+    <color name="select_week_not_checked_bg">@color/colorEdit</color>
+    <color name="select_week_checked_font">#fff</color>
+    <color name="select_week_checked_bg">#338DFB</color>
+
+    <color name="course_item_card_border_color">#60ffffff</color>
+    <color name="course_item_card_border_color_default">#00ffffff</color>
+    <color name="course_item_card_default_color">#10ffffff</color>
+    <color name="course_item_font_color">#ffffff</color>
+
+
+</resources>

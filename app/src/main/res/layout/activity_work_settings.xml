@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.settings.workSettings.WorkSettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_work_settings"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ToolBarStyle" >
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_settings_tips"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="@dimen/title_size" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/work_submit_use_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/is_use_remind_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/SettingsShowFontStyle"
+                android:text="@string/set_remind_time_tips"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/setting_work_remind_time"
+                style="@style/SettingsTipsFontStyle" />
+
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

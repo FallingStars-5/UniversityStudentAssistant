@@ -1,0 +1,88 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryDark">#2196F3</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="actionMenuTextColor">@color/colorThemeFont</item>
+    </style>
+
+    <!-- ToolBar -->
+    <style name="ToolBarStyle" parent="Widget.MaterialComponents.Toolbar">
+        <item name="actionMenuTextColor">@color/colorThemeFont</item>
+        <item name="android:textColorSecondary">#fff</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:layout_gravity">center_vertical|start</item>
+        <item name="android:textSize">18sp</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>  <!--把该属性改为false即可使menu位置位于toolbar之下-->
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="edit_AlertDialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否启用标题栏 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <!-- 是否使用背景半透明 -->
+    </style>
+
+    <style name="Chip_Selected_Color_Style" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:checkable">true</item>
+        <item name="chipStrokeColor">@color/color_selector</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="chipStrokeWidth">@dimen/chipCheckedBorderWith</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+    <style name="Chip_notSelected_Color_Style" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:checkable">true</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="chipStrokeColor">@color/color_selector</item>
+        <item name="chipStrokeWidth">@dimen/chipCheckedBorderWith</item>
+    </style>
+
+    <style name="Chip_Week_Select" parent="Widget.MaterialComponents.Chip.Action" >
+        <item name="android:backgroundTint">@color/color_selector_week</item>
+        <item name="android:textColor">@color/color_selector_week_font</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checkable">true</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="SettingsShowFontStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorThemeFont</item>
+    </style>
+
+    <style name="SettingsTipsFontStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/course_font_tips_size</item>
+        <item name="android:textColor">@color/colorTipsFont</item>
+    </style>
+
+
+
+</resources>

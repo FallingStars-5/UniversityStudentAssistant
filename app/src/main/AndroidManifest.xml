@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.srtp.assistant">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_assistant_one"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="q">
+        <service
+            android:name=".ui.course.CourseRemindService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".ui.settings.courseSettings.settingsTime.SettingsTimeActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.settings.workSettings.WorkSettingsActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.settings.systemSettings.SystemSettingsActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.settings.courseSettings.CourseSettingsActivity"
+            android:label="" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.work.workDetail.WorkDetailActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.work.addWork.AddWorkActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.course.CourseActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.work.WorkActivity"
+            android:label=""
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name=".ui.work.WorkRemindService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

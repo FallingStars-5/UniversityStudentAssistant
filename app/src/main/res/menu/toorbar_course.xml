@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/addCourse"
+        android:title="添加课程"
+        android:icon="@drawable/ic_plus"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/shareCourse"
+        android:title="分享课表"
+        android:icon="@drawable/ic_backup"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/settingsCourse"
+        android:title="课表设置"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/changeBackground"
+        android:title="更换背景"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/clearCourse"
+        android:title="清空课表"
+        app:showAsAction="never" />
+</menu>

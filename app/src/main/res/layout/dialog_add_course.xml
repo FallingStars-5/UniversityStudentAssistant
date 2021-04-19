@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.circularreveal.CircularRevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cancel_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/X_ext"
+                android:textColor="#000"
+                android:textSize="50sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/detail_course_tips"
+                android:textColor="#000"
+                android:textSize="23sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/submit_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:text="@string/submit_button_tips"
+                android:textColor="#000"
+                android:textSize="40sp" />
+        </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/colorEdit"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/dialog_course_name_tips"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/add_course_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/colorEdit"
+                        android:hint="@string/have_to_fill_tips"
+                        android:maxLines="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorThemeFont"
+                        android:textColorHint="#f00"
+                        android:textSize="@dimen/course_font_tips_size" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/colorEdit"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/get_class_place_tips"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/add_course_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/colorEdit"
+                        android:hint="@string/not_have_to_fill_tips"
+                        android:maxLines="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorThemeFont"
+                        android:textColorHint="@color/colorTipsFont"
+                        android:textSize="@dimen/course_font_tips_size" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/colorEdit"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/teacher_tips"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/add_course_teacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/colorEdit"
+                        android:hint="@string/not_have_to_fill_tips"
+                        android:maxLines="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorThemeFont"
+                        android:textColorHint="@color/colorTipsFont"
+                        android:textSize="@dimen/course_font_tips_size" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/get_class_section_tips"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/add_course_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/class_time_tips"
+                        android:textColor="@color/colorTipsFont"
+                        android:textSize="@dimen/week_font_tips_size" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/reduce_one_section"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/reduce" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/course_section_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/one"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/add_one_section"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        app:srcCompat="@drawable/add" />
+
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+                <include layout="@layout/select_week" />
+
+                <include layout="@layout/select_color" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/colorEdit"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/credits_tips"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/add_course_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/colorEdit"
+                        android:hint="@string/not_have_to_fill_tips"
+                        android:maxLines="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorThemeFont"
+                        android:textColorHint="@color/colorTipsFont"
+                        android:textSize="@dimen/week_font_tips_size" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="@color/colorEdit"
+                    app:cardCornerRadius="15dp">
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/remark_tips"
+                        android:textColor="@color/colorThemeFont"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/add_course_remark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/colorEdit"
+                        android:hint="@string/not_have_to_fill_tips"
+                        android:maxLines="1"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorThemeFont"
+                        android:textColorHint="@color/colorTipsFont"
+                        android:textSize="@dimen/week_font_tips_size" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

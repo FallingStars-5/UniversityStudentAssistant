@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal" >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorThemeFont"
+            android:textSize="20sp"
+            android:layout_weight="1"
+
+            android:layout_gravity="center"
+            android:text="@string/select_color_tips" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checked_color"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorThemeFont"
+            android:layout_marginEnd="5dp"
+            android:layout_height="30dp" />
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/set_person_color_tips"
+            android:visibility="gone"
+            android:layout_marginEnd="15dp"
+            android:id="@+id/select_person_color"
+            android:textSize="@dimen/week_font_tips_size"
+            android:textColor="@color/colorTipsFont" />
+
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="wrap_content"
+        app:checkedChip="@id/chip_color_1"
+        app:singleSelection="true"
+        android:id="@+id/select_course_color"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_1"
+            android:backgroundTint="@color/color_bg"
+            style="@style/Chip_Selected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_2"
+            style="@style/Chip_notSelected_Color_Style"
+            android:backgroundTint="@color/colorCourse2" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_3"
+            android:backgroundTint="@color/colorCourse3"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_4"
+            android:backgroundTint="@color/colorCourse4"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_5"
+            android:backgroundTint="@color/colorCourse5"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_6"
+            android:backgroundTint="@color/colorCourse6"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_7"
+            android:backgroundTint="@color/colorCourse7"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_8"
+            android:backgroundTint="@color/colorCourse8"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_9"
+            android:backgroundTint="@color/colorCourse9"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_10"
+            android:backgroundTint="@color/colorCourse10"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_11"
+            android:backgroundTint="@color/colorCourse11"
+            style="@style/Chip_notSelected_Color_Style" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_color_12"
+            android:backgroundTint="@color/colorCourse12"
+            style="@style/Chip_notSelected_Color_Style" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

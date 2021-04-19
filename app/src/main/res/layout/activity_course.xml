@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.work.WorkActivity"
+    android:layout_width="match_parent"
+    android:id="@+id/course_background"
+    android:background="@drawable/bg_test"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:layout_width="match_parent"
+        android:background="#00000000"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarCourse"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="#fff"
+            android:fitsSystemWindows="true"
+            app:theme="@style/ToolBarStyle" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="23sp"
+                android:id="@+id/course_title"
+                android:gravity="center_vertical|start"
+                android:textColor="#fff"
+                android:text="@string/head_page_my_course_tips" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbarCourse">
+
+        <com.google.android.material.circularreveal.CircularRevealGridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="8"
+            android:id="@+id/main_course_head_gridLayout"
+            app:rowCount="1"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/main_course_gridLayout_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:orientation="vertical"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+                <com.google.android.material.circularreveal.CircularRevealGridLayout
+                    android:id="@+id/main_course_gridLayout_week7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:orientation="vertical"
+                    android:layout_weight="1"
+                    app:columnCount="1"
+                    app:rowCount="15" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSubmitCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
+        android:layout_marginEnd="@dimen/fab_margin_right"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_done"
+        android:focusable="true" />
+</com.google.android.material.circularreveal.CircularRevealFrameLayout>

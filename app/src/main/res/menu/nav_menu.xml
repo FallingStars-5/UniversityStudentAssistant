@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/g1">
+    <item
+        android:id="@+id/workItem"
+        android:title="我的作业"
+        android:icon="@drawable/ic_work_nav"/>
+    <item
+        android:id="@+id/courseItem"
+        android:title="我的课表"
+        android:icon="@drawable/ic_course_nav"/>
+    <item
+        android:id="@+id/addWorkItem"
+        android:title="添加作业"
+        android:icon="@drawable/ic_add_work_nav"/>
+    </group>
+
+    <group
+        android:id="@+id/g2">
+
+    <item
+        android:id="@+id/settingsWorkItem"
+        android:title="@string/work_settings_item_tips"
+        android:icon="@drawable/ic_work_settings_nav" />
+    <item
+        android:id="@+id/settingsSystemItem"
+        android:title="@string/system_settings_item_tips"
+        android:icon="@drawable/ic_settings" />
+        <item
+            android:id="@+id/settingsCourseItem"
+            android:title="@string/course_table_settings_item_tips"
+            android:icon="@drawable/ic_course_settings" />
+
+    </group>
+
+    <group
+        android:id="@+id/g4"
+        android:visible="false">
+        <item
+            android:id="@+id/workManageItem"
+            android:title="@string/work_manage_item_tips"
+            android:icon="@drawable/ic_work_one" />
+        <item
+            android:id="@+id/courseManageItem"
+            android:title="@string/course_table_manage_item_tips"
+            android:icon="@drawable/ic_course_manage_nav" />
+    </group>
+
+    <group
+        android:id="@+id/g3">
+    <item
+        android:id="@+id/appInfoItem"
+        android:icon="@drawable/ic_about_system"
+        android:title="关于系统" />
+    </group>
+
+</menu>

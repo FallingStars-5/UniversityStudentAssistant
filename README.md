@@ -9,7 +9,7 @@
 
 **界面展示**
 
-1. 主页
+ 1.主页
 
 ![Image text](https://github.com/FallingStars-5/MyImages/blob/main/images/one.jpg)
 

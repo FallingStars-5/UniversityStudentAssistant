@@ -175,7 +175,7 @@ class AssistantApplication: Application() {
                     }
                     //Log.e("dan","本周周一日期：$nowWeekMonday")
                     var k = 1
-                    var start = s.startDate
+                    val start = s.startDate
 
                     //Log.e("dan","开学周一日期：$start")
 
@@ -188,22 +188,10 @@ class AssistantApplication: Application() {
 
                     val nowWeek = ((nowWeekMondayStamp - startStamp)/7).toInt()
 
-                    Log.e("dan","nowWeek=$nowWeek")
-
-//                    while (start!=nowWeekMonday) {
-//                        k++
-//                        start = timeAddDays(start, 7)
-//                        Log.e("dan","开学周一日期：$start")
-//                        if (k > s.weekSum) { //防止出现死循环
-//                            k = 0
-//                            break
-//                        }
-//                    }
-//                    Log.e("dan","k的值：$k")
                     if (nowWeek<1||nowWeek>s.weekSum){
                         s.nowWeek = 0
                     }else{
-                        s.nowWeek = nowWeek
+                        s.nowWeek = nowWeek+1
                     }
                     //s.nowWeek = k
                     Repository.saveCourseSettings(context,s)

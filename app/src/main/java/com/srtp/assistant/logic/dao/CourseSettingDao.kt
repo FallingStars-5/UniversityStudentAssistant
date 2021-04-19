@@ -15,6 +15,7 @@ object CourseSettingDao {
      */
     private fun initCourseSettings():CourseSettings{
         val courseSettings = CourseSettings()
+        courseSettings.startDate = "未设置"
         courseSettings.lessonTimeList = ArrayList()
         for (i in 0 until courseSettings.courseSumNumber){
 

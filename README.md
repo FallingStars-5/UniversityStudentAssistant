@@ -8,4 +8,4 @@
 2. 课程表功能：支持用户动态更换背景，设置上课提醒时间等。
 
 **界面展示**
-
+![Image text](https://github.com/FallingStars-5/MyImages/blob/main/images/add_course.jpg)

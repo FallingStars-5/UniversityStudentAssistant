@@ -9,4 +9,23 @@
 
 **界面展示**
 
+1. 主页
+
+![Image text](https://github.com/FallingStars-5/MyImages/blob/main/images/one.jpg)
+
+2.课程表页面
+
+![Image text](https://github.com/FallingStars-5/MyImages/blob/main/images/course_1.jpg)
+
+3.作业页面
+
 ![Image text](https://github.com/FallingStars-5/MyImages/blob/main/images/add_course.jpg)
+
+
+**项目中使用的开源库**
+
+1.Sqlite数据库的操作：[LitePal](https://github.com/guolindev/LitePal)
+
+2.图片裁剪库：[uCrop](https://github.com/Yalantis/uCrop)
+
+3.圆形图片ImageView: [CircleImageView](https://github.com/hdodenhof/CircleImageView)

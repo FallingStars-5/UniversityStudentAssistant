@@ -47,7 +47,7 @@ class CourseRemindService : Service() {
          */
         Thread {
 
-            val msg = Message.obtain()
+            val msg = Message.obtain()  ///!!!!!!!!!!!!!!!
             val courseSettings = AssistantApplication.getSavedCourseSettings(this)
             val remindTime = courseSettings.remindMinuteTime //天
 

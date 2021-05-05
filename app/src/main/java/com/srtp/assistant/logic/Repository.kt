@@ -68,6 +68,24 @@ object Repository {
     fun deleteCourseByStartSectionAndWeek(courseTableName:String,startSection: Int, week: Int) =
                             CourseDao.deleteCourseByStartSectionAndWeek(courseTableName,startSection, week)
 
+
+    /**
+     * 实现实时校园接口
+     */
+    fun addCampusAddress(campusAddress: CampusAddress) = CampusAddressDao.addCampusAddress(campusAddress)
+
+    fun findCampusAddressById(id:Long) = CampusAddressDao.findCampusAddressById(id)
+
+    fun findCampusAddressBySortName(sortName: String) = CampusAddressDao.findCampusAddressBySortName(sortName)
+
+    fun findAllCampusAddressName() = CampusAddressDao.findAllCampusAddressName()
+
+    fun updateCampusAddressById(campusAddress: CampusAddress) = CampusAddressDao.updateCampusAddressById(campusAddress)
+
+    fun deleteCampusAddressById(id:Long) = CampusAddressDao.deleteCampusAddressById(id)
+
+    fun deleteCampusAddressBySortName(sortName:String) = CampusAddressDao.deleteCampusAddressBySortName(sortName)
+
     /**
      * 实现作业设置接口
      */
@@ -95,5 +113,7 @@ object Repository {
     fun getSavedSystemInfo(context: Context) = SystemInfoDao.getSavedSystemInfo(context)
 
     fun isSystemInfoSaved(context: Context) = SystemInfoDao.isSystemInfoSaved(context)
+
+
 
 }

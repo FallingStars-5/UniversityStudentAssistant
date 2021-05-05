@@ -355,6 +355,12 @@ class AssistantApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         LitePal.initialize(this)
+        LitePal.getDatabase()
+        for (i in 1..5){
+            getCampusAddress(i).let { Repository.addCampusAddress(it) }
+        }
+        Log.e("dan","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+
         context = applicationContext
     }
 }

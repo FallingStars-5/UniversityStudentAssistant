@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.circularreveal.CircularRevealLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.campus.subscribe.SubscribeCampusActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_subscribe_campus"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ToolBarStyle">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/showing_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="订阅服务"
+            android:textColor="#fff"
+            android:textSize="@dimen/title_size" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contain_of_chips"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical" />
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</com.google.android.material.circularreveal.CircularRevealLinearLayout>

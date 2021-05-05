@@ -9,6 +9,7 @@
     <list>
         <mapping class="com.srtp.assistant.logic.model.Work" />
         <mapping class="com.srtp.assistant.logic.model.Course" />
+        <mapping class="com.srtp.assistant.logic.model.CampusAddress" />
     </list>
 
 </litepal>

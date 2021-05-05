@@ -10,18 +10,28 @@
 
     <application
         android:name="org.litepal.LitePalApplication"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_assistant_one"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:targetApi="q">
+        <activity
+            android:name=".ui.campus.subscribe.SubscribeCampusActivity"
+            android:label=""/>
+        <activity
+            android:name=".ui.campus.showingCampus.ShowingCampusActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.campus.CampusActivity"
+            android:label="" />
+
         <service
             android:name=".ui.course.CourseRemindService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="false" />
 
         <activity
             android:name=".ui.settings.courseSettings.settingsTime.SettingsTimeActivity"
@@ -79,7 +89,7 @@
         <service
             android:name=".ui.work.WorkRemindService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>

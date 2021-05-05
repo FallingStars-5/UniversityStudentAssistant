@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     app:cardCornerRadius="5dp"
     android:layout_margin="12dp"
-    android:layout_height="100dp">
+    android:layout_height="80dp">
     <com.google.android.material.circularreveal.CircularRevealLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,14 +25,14 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:text="@string/head_page_button_my_work_tips"
-                android:textSize="30sp"
+                android:textSize="23sp"
                 android:textColor="#fff" />
         </com.google.android.material.circularreveal.CircularRevealFrameLayout>
 
         <com.google.android.material.circularreveal.CircularRevealFrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="20dp"
             android:id="@+id/courseLead"
             android:background="@drawable/bg_partly_cloudy_day"
             android:layout_weight="1" >
@@ -43,7 +43,25 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:text="@string/head_page_my_course_tips"
-                android:textSize="30sp"
+                android:textSize="23sp"
+                android:textColor="#fff" />
+        </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+
+        <com.google.android.material.circularreveal.CircularRevealFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:id="@+id/campusLead"
+            android:background="@drawable/bg_partly_cloudy_day"
+            android:layout_weight="1" >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="实时校园"
+                android:textSize="23sp"
                 android:textColor="#fff" />
         </com.google.android.material.circularreveal.CircularRevealFrameLayout>
 

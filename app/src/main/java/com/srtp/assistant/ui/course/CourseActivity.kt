@@ -38,10 +38,10 @@ import com.yalantis.ucrop.UCrop
 import kotlinx.android.synthetic.main.activity_course.*
 import kotlinx.android.synthetic.main.dialog_add_course.*
 import kotlinx.android.synthetic.main.select_week.view.*
+import org.jsoup.Jsoup
 import java.io.*
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.text.set
 
 
@@ -127,7 +127,7 @@ class CourseActivity : AppCompatActivity() {
         builder.setPositiveButton("确定"){ _, _->
             viewModel.deleteAllCourseByTable(viewModel.courseSettings.showingLessonTable)
         }
-        builder.setNegativeButton("取消"){ dialog,_->
+        builder.setNegativeButton("取消"){ dialog, _->
             dialog.dismiss()
         }
         builder.show()
@@ -151,7 +151,7 @@ class CourseActivity : AppCompatActivity() {
      * 启动课程设置页面
      */
     private fun settings() {
-        val intent = Intent(this,CourseSettingsActivity::class.java)
+        val intent = Intent(this, CourseSettingsActivity::class.java)
         startActivity(intent)
     }
 
@@ -181,7 +181,7 @@ class CourseActivity : AppCompatActivity() {
                 0 -> {
                     setData(true)
                     fabSubmitCourse.visibility = View.VISIBLE
-                    Toast.makeText(this,"根据课程的开始节和星期点击添加，长按删除",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "根据课程的开始节和星期点击添加，长按删除", Toast.LENGTH_LONG).show()
                 }
                 1 -> leadCourseFromNetWork()
                 2 -> leadCourseByPictures()
@@ -194,15 +194,17 @@ class CourseActivity : AppCompatActivity() {
      * 通过图片智能识别方式导入
      */
     private fun leadCourseByPictures() {
-        Toast.makeText(this,"暂未实现",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "暂未实现", Toast.LENGTH_SHORT).show()
     }
 
     /**
      * 通过教务网导入
      */
     private fun leadCourseFromNetWork() {
-        Toast.makeText(this,"暂未实现",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "暂未实现", Toast.LENGTH_SHORT).show()
     }
+
+
 
     override fun onBackPressed() {
         if (fabSubmitCourse.visibility==View.VISIBLE){
@@ -257,7 +259,11 @@ class CourseActivity : AppCompatActivity() {
             while (i<viewModel.courseSettings.courseSumNumber){   //从第一节到最后一节课循环
 
                 //读取节为i+1，星期数为j的当前课表所有课程
-                val courseList = viewModel.courseListWeekAndSection(viewModel.courseSettings.showingLessonTable,i + 1, j)
+                val courseList = viewModel.courseListWeekAndSection(
+                    viewModel.courseSettings.showingLessonTable,
+                    i + 1,
+                    j
+                )
 
                 //设置表格布局的布局参数:(i,0)坐标，权重为1.0f
                 val rowSpec = GridLayout.spec(i, 1, 1.0f)  //行
@@ -338,7 +344,7 @@ class CourseActivity : AppCompatActivity() {
             //判断该课程当前周是否有课
             val s = StringBuffer(course.classWeekNum)
             if(viewModel.courseSettings.nowWeek>=1&&viewModel.courseSettings.nowWeek<=viewModel.courseSettings.weekSum){
-                if (s[viewModel.courseSettings.nowWeek-1]=='0'){
+                if (s[viewModel.courseSettings.nowWeek - 1]=='0'){
 
                     //当前周无课时设置卡片背景透明度为100，并提示该课程是非本周课程
                     card.background.alpha = 100
@@ -347,12 +353,14 @@ class CourseActivity : AppCompatActivity() {
                 }else{
 
                     //判断该课程是否正在上课
-                    val classTime = AssistantApplication.getClassTime(this,course)
+                    val classTime = AssistantApplication.getClassTime(this, course)
                     val df = SimpleDateFormat("HH:mm", Locale.CHINA)//hh表示12小时制，HH表示24小时制
                     val now = df.parse(df.format(Date()))!! //当前时间
                     val beginTime = df.parse(classTime.startTime)!!
                     val endTime = df.parse(classTime.endTime)!!
-                    if (AssistantApplication.belongCalendar(now,beginTime,endTime)&&course.week==AssistantApplication.getWeek(viewModel.week)){
+                    if (AssistantApplication.belongCalendar(now, beginTime, endTime)&&course.week==AssistantApplication.getWeek(
+                            viewModel.week
+                        )){
                         tv.setTextColor(resources.getColor(R.color.colorPrimary))
                     }
                 }
@@ -388,7 +396,11 @@ class CourseActivity : AppCompatActivity() {
             if (courseList.isNotEmpty()){
                 val builder = android.app.AlertDialog.Builder(this)
                 builder.setPositiveButton("是") { _, _ ->
-                    viewModel.deleteCourseByStartSectionAndWeek(viewModel.courseSettings.showingLessonTable,startSection, week)
+                    viewModel.deleteCourseByStartSectionAndWeek(
+                        viewModel.courseSettings.showingLessonTable,
+                        startSection,
+                        week
+                    )
                     setData(false)
                 }
                 builder.setNegativeButton("否") { dialogInterface, _ -> dialogInterface.dismiss()
@@ -443,7 +455,7 @@ class CourseActivity : AppCompatActivity() {
             val course = Course()
             course.sectionStart = i+1
             course.sectionNum = 1
-            val time = AssistantApplication.getClassTime(this,course)
+            val time = AssistantApplication.getClassTime(this, course)
 
             tvTime.text = "${time.startTime}\n${time.endTime}"
 
@@ -462,7 +474,7 @@ class CourseActivity : AppCompatActivity() {
             val now = df.parse(df.format(Date()))!! //当前时间
             val beginTime = df.parse(time.startTime)!!
             val endTime = df.parse(time.endTime)!!
-            if (AssistantApplication.belongCalendar(now,beginTime,endTime)){
+            if (AssistantApplication.belongCalendar(now, beginTime, endTime)){
                 tvTime.setTextColor(resources.getColor(R.color.colorPrimary))
                 tvSection.setTextColor(resources.getColor(R.color.colorPrimary))
             }
@@ -602,7 +614,11 @@ class CourseActivity : AppCompatActivity() {
         viewModel.listCheckedWeek = selectWeek.checkedChipIds as ArrayList<Int>
 
         //从数据库中查找满足条件的课程信息
-        val courseList = viewModel.courseListWeekAndSection(viewModel.courseSettings.showingLessonTable,sectionStart, week)
+        val courseList = viewModel.courseListWeekAndSection(
+            viewModel.courseSettings.showingLessonTable,
+            sectionStart,
+            week
+        )
 
         //若该位置存在课程，则显示该课程；否则显示空白对话框来添加新课程
         if (courseList.isNotEmpty()){
@@ -613,7 +629,7 @@ class CourseActivity : AppCompatActivity() {
             numberSection.text = course.sectionNum.toString() //显示上课节数
 
             //显示上课时间区间
-            val classTime = AssistantApplication.getClassTime(this,course)
+            val classTime = AssistantApplication.getClassTime(this, course)
             time.text = "${classTime.startTime}-${classTime.endTime}"
 
             credit.setText(course.credits.toString())  //显示学分
@@ -688,7 +704,7 @@ class CourseActivity : AppCompatActivity() {
             val course = Course()
             course.sectionStart = sectionStart  //开始节为点击位置的节数
             course.sectionNum = 1  //上课节数默认为1
-            val classTime = AssistantApplication.getClassTime(this,course)
+            val classTime = AssistantApplication.getClassTime(this, course)
             time.text = "${classTime.startTime}-${classTime.endTime}"
 
             viewModel.course.color = R.color.colorCourseDefault  //设置显示颜色为默认颜色
@@ -765,7 +781,7 @@ class CourseActivity : AppCompatActivity() {
                 val c = Course()
                 c.sectionStart = sectionStart
                 c.sectionNum = numberSection.text.toString().toInt()
-                val t = AssistantApplication.getClassTime(this,c)
+                val t = AssistantApplication.getClassTime(this, c)
                 time.text = "${t.startTime}-${t.endTime}"
             }else{
                 Toast.makeText(this, "主人，已到达时间表最后一节课，不可再增加哦", Toast.LENGTH_SHORT).show()
@@ -779,7 +795,7 @@ class CourseActivity : AppCompatActivity() {
                 val c = Course()
                 c.sectionStart = sectionStart
                 c.sectionNum = numberSection.text.toString().toInt()
-                val t = AssistantApplication.getClassTime(this,c)
+                val t = AssistantApplication.getClassTime(this, c)
                 time.text = "${t.startTime}-${t.endTime}"
             }else{
                 Toast.makeText(this, "主人，最小设置节数为1，不可再减小哦", Toast.LENGTH_SHORT).show()
@@ -863,7 +879,8 @@ class CourseActivity : AppCompatActivity() {
         dialog.show() //显示对话框
 
         //设置对话框的长和宽
-        dialog.window?.setLayout(this.resources.displayMetrics.widthPixels,
+        dialog.window?.setLayout(
+            this.resources.displayMetrics.widthPixels,
             resources.displayMetrics.heightPixels * 2 / 3
         )
     }
@@ -917,7 +934,12 @@ class CourseActivity : AppCompatActivity() {
                         //设置toolbar颜色
                         options.setToolbarColor(ActivityCompat.getColor(this, R.color.colorPrimary))
                         //设置状态栏颜色
-                        options.setStatusBarColor(ActivityCompat.getColor(this, R.color.colorPrimary))
+                        options.setStatusBarColor(
+                            ActivityCompat.getColor(
+                                this,
+                                R.color.colorPrimary
+                            )
+                        )
                         viewModel.uriTempFile = Uri.fromFile(
                             File(
                                 cacheDir,
@@ -944,7 +966,7 @@ class CourseActivity : AppCompatActivity() {
     /**
      * 保存课表的背景颜色
      */
-    private fun saveCourseBackground(data:Intent?){
+    private fun saveCourseBackground(data: Intent?){
         viewModel.courseSettings.backgroundType = 1
         viewModel.courseSettings.background = AssistantApplication.savePictureToLocal(data)
         viewModel.saveCourseSettings(this)

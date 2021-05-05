@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,10 +16,9 @@ import androidx.core.view.GravityCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
-import com.srtp.assistant.logic.model.CourseSettings
-import com.srtp.assistant.logic.model.MyTime
-import com.srtp.assistant.logic.model.Work
-import com.srtp.assistant.logic.model.getClassTime
+import com.srtp.assistant.logic.Repository
+import com.srtp.assistant.logic.model.*
+import com.srtp.assistant.ui.campus.CampusActivity
 import com.srtp.assistant.ui.course.CourseActivity
 import com.srtp.assistant.ui.course.CourseRemindService
 import com.srtp.assistant.ui.settings.courseSettings.CourseSettingsActivity
@@ -36,6 +36,7 @@ import kotlinx.android.synthetic.main.current_work.*
 import kotlinx.android.synthetic.main.headpage_head.*
 import kotlinx.android.synthetic.main.headpage_lead.*
 import org.litepal.LitePal
+import retrofit2.Retrofit
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -44,11 +45,26 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private val viewModel by lazy { ViewModelProvider(this).get(MainActivityViewModel::class.java) }
 
     private lateinit var adapter: MainViewAdapter
+    @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        //val retrofit = Retrofit
+        LitePal.initialize(this)
         LitePal.getDatabase()
+        val settings = getSharedPreferences("init", MODE_PRIVATE)
+        val init = settings.getBoolean("init",false)
+        //程序安装时初始化
+        if (!init){
+            for (i in 1..74){
+                getCampusAddress(i).let { Repository.addCampusAddress(it) }
+            }
+            val editor = settings.edit()
+            editor.putBoolean("init",true)
+            editor.apply()
+        }
+
+
         //背景图与状态栏颜色融入一体
         val decorView = window.decorView
         decorView.systemUiVisibility =
@@ -187,6 +203,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         addCurrentWork.setOnClickListener(this)
         addWorkInHeadPage.setOnClickListener(this)
         more_works_leader.setOnClickListener(this)
+
+        campusLead.setOnClickListener(this)
+
         myDraw.setOnClickListener(this)
         nextClassInfo.text = viewModel.nextCourseList(this)
         var s = "凌晨"
@@ -218,7 +237,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         }
 
         if (viewModel.hour in 18..22){
-            s = "晚上"
+             s = "晚上"
         }
 
         if (viewModel.hour in 23..23){
@@ -241,6 +260,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     private fun showRandomPoems(){
         //randomTextOfHeadPage.text = ""
     }
+
     /**
      * 展示当前课程数据
      */
@@ -260,9 +280,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             )
                 ?: MyTime(viewModel.hour,viewModel.minute))
             if (time.hour>0){
-                restTimeCurrent.text = "距下课还有 ${time.hour}小时 ${time.minute} 分钟"
+                restTimeCurrent.text = "距下课还有 ${time.hour} 小时 ${time.minute} 分钟"
             }else{
-                restTimeCurrent.text = "距下课还有 $${time.minute} 分钟"
+                restTimeCurrent.text = "距下课还有 ${time.minute} 分钟"
             }
 
 
@@ -307,7 +327,14 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             addWorkInHeadPage -> turnToAddWorkInHeadPage()
             myDraw -> drawerLayout.openDrawer(GravityCompat.START)
             more_works_leader -> turnToWork()
+
+            campusLead -> turnToCampus()
         }
+    }
+
+    private fun turnToCampus() {
+        val intent = Intent(this,CampusActivity::class.java)
+        startActivity(intent)
     }
 
     /**

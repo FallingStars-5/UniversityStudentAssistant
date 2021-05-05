@@ -27,4 +27,6 @@
 
     <dimen name="work_details_pictures_width">300dp</dimen>
     <dimen name="work_details_pictures_height">225dp</dimen>
+
+    <dimen name="campus_name_text_size">9sp</dimen>
 </resources>

@@ -48,7 +48,11 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'com.yalantis:ucrop:1.4.1' //图片裁剪库
+    implementation 'org.jsoup:jsoup:1.8.3'
     testImplementation 'junit:junit:4.12'
+
+    //内存泄露监测器、会安装的手机上，生成正式安装文件时一定要注释掉
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
